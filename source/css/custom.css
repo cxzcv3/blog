@@ -1,0 +1,21 @@
+/* 自定义样式 */
+
+/* 顶部横幅：流动渐变 */
+#page-header {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 45%, #f093fb 100%) !important;
+  background-size: 300% 300% !important;
+  background-position: 0% 50% !important;
+  animation: bf-gradient 18s ease infinite;
+}
+
+@keyframes bf-gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 卡片轻微玻璃感 */
+.card-widget,
+.recent-post-item {
+  backdrop-filter: blur(6px);
+}

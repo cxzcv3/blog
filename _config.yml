@@ -4,7 +4,7 @@
 
 # Site
 title: Hexo
-subtitle: ''
+subtitle: '记录 · 折腾 · 分享'
 description: ''
 keywords:
 author: cxzcv3
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
