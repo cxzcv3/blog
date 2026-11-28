@@ -18,4 +18,4 @@ date: 2026-11-28 00:37:23
 sudo arp-scan -l
 ```
 
-![image-20261128165428354](Vulnhub-DC-1.assets/image-20261128165428354.png)
+{% asset_img image-20261128165428354.png "arp-scan 结果" %}
