@@ -1,46 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
   <defs>
-    <linearGradient id="wingA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFE0B2"/>
-      <stop offset="45%" stop-color="#FFA36B"/>
-      <stop offset="100%" stop-color="#FF5C8A"/>
+    <linearGradient id="up" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD9A8"/>
+      <stop offset="50%" stop-color="#FF9A6B"/>
+      <stop offset="100%" stop-color="#FF4D7E"/>
     </linearGradient>
-    <linearGradient id="wingB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFB86B"/>
-      <stop offset="100%" stop-color="#FF3D71"/>
+    <linearGradient id="low" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFB072"/>
+      <stop offset="100%" stop-color="#FF2E63"/>
     </linearGradient>
-    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFF3E6"/>
-      <stop offset="100%" stop-color="#FFC9A8"/>
+    <linearGradient id="bd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF6EC"/>
+      <stop offset="100%" stop-color="#FFC59B"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
-      <stop offset="0%" stop-color="#FF5C8A" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#FF5C8A" stop-opacity="0"/>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF5C8A" stop-opacity="0.40"/>
+      <stop offset="75%" stop-color="#FF8A65" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FF8A65" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <rect x="0" y="0" width="240" height="240" fill="url(#glow)"/>
+  <circle cx="120" cy="120" r="118" fill="url(#halo)"/>
 
-  <!-- 左上翅 -->
-  <path d="M116 118 C 96 62, 44 34, 28 62 C 14 88, 46 118, 92 128 C 102 130, 110 128, 116 118 Z" fill="url(#wingA)"/>
-  <!-- 右上翅 -->
-  <path d="M124 118 C 144 62, 196 34, 212 62 C 226 88, 194 118, 148 128 C 138 130, 130 128, 124 118 Z" fill="url(#wingA)"/>
-  <!-- 左下翅 -->
-  <path d="M116 130 C 100 152, 78 190, 96 204 C 112 216, 122 178, 122 146 Z" fill="url(#wingB)" opacity="0.95"/>
-  <!-- 右下翅 -->
-  <path d="M124 130 C 140 152, 162 190, 144 204 C 128 216, 118 178, 118 146 Z" fill="url(#wingB)" opacity="0.95"/>
+  <g stroke="#170c11" stroke-width="4" stroke-linejoin="round">
+    <!-- 上翅 -->
+    <ellipse cx="70" cy="86" rx="48" ry="62" fill="url(#up)" transform="rotate(-38 70 86)"/>
+    <ellipse cx="170" cy="86" rx="48" ry="62" fill="url(#up)" transform="rotate(38 170 86)"/>
+    <!-- 下翅 -->
+    <ellipse cx="80" cy="170" rx="33" ry="42" fill="url(#low)" transform="rotate(28 80 170)"/>
+    <ellipse cx="160" cy="170" rx="33" ry="42" fill="url(#low)" transform="rotate(-28 160 170)"/>
+  </g>
 
-  <!-- 翅膀上的浅色纹路 -->
-  <path d="M104 112 C 88 86, 62 66, 44 66" stroke="#FFE9D6" stroke-opacity="0.75" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M136 112 C 152 86, 178 66, 196 66" stroke="#FFE9D6" stroke-opacity="0.75" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- 翅脉高光 -->
+  <ellipse cx="66" cy="78" rx="22" ry="30" fill="#FFEBD6" opacity="0.25" transform="rotate(-38 66 78)"/>
+  <ellipse cx="174" cy="78" rx="22" ry="30" fill="#FFEBD6" opacity="0.25" transform="rotate(38 174 78)"/>
 
   <!-- 身体 -->
-  <rect x="115" y="104" width="10" height="80" rx="5" fill="url(#body)"/>
-  <circle cx="120" cy="100" r="8" fill="url(#body)"/>
+  <rect x="111" y="96" width="18" height="96" rx="9" fill="url(#bd)" stroke="#170c11" stroke-width="4"/>
+  <circle cx="120" cy="92" r="12" fill="url(#bd)" stroke="#170c11" stroke-width="4"/>
 
   <!-- 触角 -->
-  <path d="M117 94 C 110 76, 100 68, 94 64" stroke="#FFD3A5" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M123 94 C 130 76, 140 68, 146 64" stroke="#FFD3A5" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <circle cx="93" cy="63" r="4.5" fill="#FF5C8A"/>
-  <circle cx="147" cy="63" r="4.5" fill="#FF5C8A"/>
+  <g stroke="#FFD9A8" stroke-width="3.5" fill="none" stroke-linecap="round">
+    <path d="M113 84 C 106 62, 96 52, 88 47"/>
+    <path d="M127 84 C 134 62, 144 52, 152 47"/>
+  </g>
+  <circle cx="87" cy="46" r="6" fill="#FF4D7E"/>
+  <circle cx="153" cy="46" r="6" fill="#FF4D7E"/>
 </svg>

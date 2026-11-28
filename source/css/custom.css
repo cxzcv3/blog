@@ -2,11 +2,11 @@
 
 /* 顶部横幅：极光渐变 + 呼吸变色 */
 #page-header {
-  background-color: #140d10 !important;
+  background-color: #1b0f14 !important;
   background-image:
-    radial-gradient(ellipse 900px 620px at 12% 12%, rgba(255, 92, 138, .90), transparent 68%),
-    radial-gradient(ellipse 820px 560px at 88% 18%, rgba(255, 154, 90, .85), transparent 66%),
-    radial-gradient(ellipse 900px 700px at 55% 100%, rgba(255, 196, 140, .75), transparent 70%) !important;
+    radial-gradient(ellipse 1100px 780px at 14% 8%, rgba(255, 76, 130, .96), transparent 64%),
+    radial-gradient(ellipse 1000px 720px at 88% 10%, rgba(255, 148, 68, .92), transparent 64%),
+    radial-gradient(ellipse 1200px 900px at 50% 112%, rgba(255, 203, 143, .88), transparent 70%) !important;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
   animation: bf-breathe 14s ease-in-out infinite alternate;
