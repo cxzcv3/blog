@@ -18,4 +18,4 @@ date: 2026-11-28 00:37:23
 sudo arp-scan -l
 ```
 
-{% asset_img image-20261128165428354.png "arp-scan 结果" %}
+![arp-scan 结果](image-20261128165428354.png)

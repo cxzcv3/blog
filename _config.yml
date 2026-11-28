@@ -103,3 +103,8 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# markdown 渲染：把文章目录里的相对图片解析成文章资源路径
+marked:
+  prependRoot: true
+  postAsset: true
