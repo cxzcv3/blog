@@ -20,4 +20,4 @@ sudo arp-scan -l
 
 ![arp-scan 结果](image-20261128165428354.png)
 
-![image-20261128171312514](Vulnhub-DC-1.assets/image-20261128171312514.png)
+![image-20261128171312514](image-20261128171312514.png)
