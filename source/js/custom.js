@@ -64,7 +64,7 @@
         var alpha = s.a * (0.65 + 0.35 * Math.sin(s.tw));
         ctx.beginPath();
         ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 214, 170, ' + alpha.toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(255, 255, 255, ' + (alpha * 0.9).toFixed(3) + ')';
         ctx.fill();
       }
       requestAnimationFrame(tick);

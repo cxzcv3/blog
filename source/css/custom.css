@@ -1,42 +1,47 @@
-/* ===== 粉橘色霓虹定制（效果不变，只换配色） ===== */
+/* ===== 浅色温柔粉（奶油白 + 珊瑚粉） ===== */
 
-/* 顶部横幅：极光渐变 + 呼吸变色 */
-#page-header {
-  background-color: #2a1020 !important;
+/* 整页底色：奶油白 + 两团暖光 */
+body {
+  background-color: #fdf6ef !important;
   background-image:
-    radial-gradient(ellipse 1100px 780px at 14% 8%, rgba(255, 84, 140, .96), transparent 64%),
-    radial-gradient(ellipse 1000px 720px at 88% 10%, rgba(255, 158, 60, .94), transparent 64%),
-    radial-gradient(ellipse 1200px 900px at 50% 112%, rgba(255, 205, 145, .90), transparent 70%) !important;
+    radial-gradient(900px 620px at 100% 0%, rgba(250, 205, 178, .55), transparent 72%),
+    radial-gradient(900px 700px at 0% 100%, rgba(252, 222, 200, .60), transparent 72%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* 顶部横幅：奶油白 → 蜜桃 → 珊瑚 */
+#page-header {
+  background-color: #f7c9ad !important;
+  background-image:
+    radial-gradient(ellipse 1200px 820px at 6% -10%, rgba(255, 249, 242, .98), transparent 62%),
+    radial-gradient(ellipse 1100px 820px at 96% 108%, rgba(238, 118, 88, .95), transparent 66%),
+    linear-gradient(118deg, #fdf2e6 0%, #f8c8a9 46%, #f08a68 100%) !important;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
-  animation: bf-breathe 14s ease-in-out infinite alternate;
 }
 
-@keyframes bf-breathe {
-  from { filter: saturate(1) hue-rotate(0deg); }
-  to   { filter: saturate(1.22) hue-rotate(-10deg); }
-}
-
-/* 网格 + 中心辉光 */
+/* 横幅装饰：角落柔和圆环 */
 #page-header::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 0;
   background-image:
-    radial-gradient(circle at 50% 46%, rgba(255, 122, 110, .36), transparent 62%),
-    linear-gradient(rgba(255, 122, 130, .17) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 176, 96, .14) 1px, transparent 1px);
-  background-size: 100% 100%, 46px 46px, 46px 46px;
-  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 78%);
-  mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 78%);
-  animation: bf-grid 16s linear infinite;
+    radial-gradient(circle at 86% 4%, transparent 179px, rgba(255, 255, 255, .42) 180px 181px, transparent 182px),
+    radial-gradient(circle at 86% 4%, transparent 259px, rgba(255, 255, 255, .30) 260px 261px, transparent 262px),
+    radial-gradient(circle at 86% 4%, transparent 339px, rgba(255, 255, 255, .20) 340px 341px, transparent 342px),
+    radial-gradient(circle at 2% 108%, transparent 219px, rgba(255, 255, 255, .34) 220px 221px, transparent 222px),
+    radial-gradient(circle at 2% 108%, transparent 299px, rgba(255, 255, 255, .22) 300px 301px, transparent 302px);
 }
 
-@keyframes bf-grid {
-  to { background-position: 0 0, 46px 46px, 46px 46px; }
+/* 导航栏站点名：浅色底用深棕，避免看不清 */
+#nav .site-name,
+.site-name {
+  color: #7a3b2c !important;
+  text-shadow: none !important;
 }
-
 /* 星空画布 */
 #page-header .dsh-stars {
   position: absolute;
@@ -47,40 +52,44 @@
   z-index: 0;
 }
 
-#page-header::after { z-index: 0; }
-
 #site-info { z-index: 2; }
 
-/* 整页背景：两团暖色辉光 */
-body {
-  background-image:
-    radial-gradient(700px 500px at 92% 8%, rgba(255, 92, 138, .16), transparent 70%),
-    radial-gradient(800px 600px at 4% 62%, rgba(255, 154, 90, .13), transparent 70%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-/* 站点标题发光 */
-#site-title {
-  text-shadow: 0 0 16px rgba(255, 120, 140, .95), 0 0 52px rgba(255, 190, 120, .65);
+/* 横幅标题：白色 + 柔和阴影 */
+#site-title,
+#post-info .post-title {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: 0 2px 20px rgba(150, 62, 44, .38), 0 1px 3px rgba(150, 62, 44, .25);
 }
 
 #site-subtitle {
-  text-shadow: 0 0 12px rgba(255, 186, 120, .7);
+  color: rgba(255, 255, 255, .95) !important;
+  text-shadow: 0 2px 14px rgba(150, 62, 44, .32);
 }
 
-/* 卡片：玻璃质感 + 悬浮发光 */
+/* 卡片：白色 + 柔和投影 */
 .card-widget,
 .recent-post-item {
-  backdrop-filter: blur(10px) saturate(140%);
-  border: 1px solid rgba(255, 138, 101, .22);
-  transition: box-shadow .35s ease, border-color .35s ease;
+  background: rgba(255, 255, 255, .88) !important;
+  border: 1px solid rgba(240, 152, 122, .25) !important;
+  box-shadow: 0 10px 30px rgba(212, 148, 122, .13);
+  backdrop-filter: blur(8px) saturate(120%);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
 .card-widget:hover,
 .recent-post-item:hover {
-  border-color: rgba(255, 138, 101, .65);
-  box-shadow: 0 0 0 1px rgba(255, 138, 101, .35), 0 18px 45px rgba(140, 45, 60, .45);
+  transform: translateY(-4px);
+  border-color: rgba(232, 115, 90, .48) !important;
+  box-shadow: 0 18px 42px rgba(212, 130, 108, .22);
+}
+
+/* 列表卡片标题：珊瑚渐变 */
+.recent-post-item .article-title {
+  background-image: linear-gradient(92deg, #ef9a6e, #e8735a 55%, #d4513d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* 滚动进场动画 */
@@ -93,43 +102,45 @@ body {
 }
 
 @keyframes bf-in {
-  from { opacity: 0; transform: translateY(36px); }
+  from { opacity: 0; transform: translateY(30px); }
   to   { opacity: 1; transform: none; }
 }
 
-/* 列表卡片标题：渐变字 */
-.recent-post-item .article-title {
-  background-image: linear-gradient(92deg, #ffd3a5, #ff8a65 55%, #ff5c8a);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* 文章页大标题：横幅已经是亮的，改用白色+阴影保证可读 */
-#post-info .post-title {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  text-shadow: 0 2px 20px rgba(70, 10, 35, .55), 0 1px 3px rgba(70, 10, 35, .4);
-}
-
-/* 光标光晕 */
+/* 光标光晕：淡暖光，浅色底上很轻 */
 .cursor-glow {
   position: fixed;
   top: 0;
   left: 0;
-  width: 420px;
-  height: 420px;
-  margin: -210px 0 0 -210px;
+  width: 380px;
+  height: 380px;
+  margin: -190px 0 0 -190px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 138, 101, .24), rgba(255, 92, 138, .10) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 190, 165, .35), transparent 68%);
   pointer-events: none;
   z-index: 1;
   opacity: 0;
   transition: opacity .45s ease;
-  filter: blur(6px);
+  filter: blur(10px);
 }
 
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ff8a65, #ff5c8a);
+  background: linear-gradient(180deg, #f2a07b, #e8735a);
+}
+
+/* 横幅左侧压暗一点，让白色标题/元信息更好读（渐变自然过渡，不是方块） */
+#page-header.post-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(122, 46, 32, .30) 0%, rgba(122, 46, 32, .12) 34%, rgba(122, 46, 32, 0) 60%);
+}
+
+#post-info .post-meta-container,
+#post-info .post-meta-container a,
+#post-info .post-meta-container span {
+  color: rgba(255, 255, 255, .96) !important;
+  text-shadow: 0 1px 6px rgba(120, 45, 30, .5);
 }

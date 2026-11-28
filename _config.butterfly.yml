@@ -383,9 +383,9 @@ readmode: true
 
 # Dark Mode
 darkmode:
-  enable: true
+  enable: false
   # Toggle Button to switch dark/light mode
-  button: true
+  button: false
   # Switch dark/light mode automatically
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
@@ -777,21 +777,21 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#ff8a65"
-  paginator: "#ffb86b"
-  button_hover: "#ff5c8a"
-  text_selection: "#ffb4a2"
-  link_color: "#ffa07a"
-  meta_color: "#c9b6ae"
-  hr_color: "#5a2a2a"
-  code_foreground: "#ffb4a2"
-  code_background: "rgba(255, 138, 101, .10)"
-  toc_color: "#ff8a65"
-  blockquote_padding_color: "#ff8a65"
-  blockquote_background_color: "#ff8a65"
-  scrollbar_color: "#ff8a65"
-  meta_theme_color_light: "1a1012"
-  meta_theme_color_dark: "1a1012"
+  main: "#e8735a"
+  paginator: "#f2a07b"
+  button_hover: "#d95f4a"
+  text_selection: "#fbd3be"
+  link_color: "#d9604a"
+  meta_color: "#9b7b72"
+  hr_color: "#f0d5c6"
+  code_foreground: "#c2410c"
+  code_background: "rgba(232, 115, 90, .08)"
+  toc_color: "#e8735a"
+  blockquote_padding_color: "#f0a07b"
+  blockquote_background_color: "#f0a07b"
+  scrollbar_color: "#e8735a"
+  meta_theme_color_light: "fdf6ef"
+  meta_theme_color_dark: "fdf6ef"
 
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI
@@ -824,7 +824,7 @@ preloader:
 enter_transitions: true
 
 # Default display mode - light (default) / dark
-display_mode: dark
+display_mode: light
 
 # Configuration for beautifying the content of the article
 beautify:
