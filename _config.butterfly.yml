@@ -56,8 +56,8 @@ social:
 favicon: /img/favicon.png
 
 avatar:
-  img: /img/butterfly-icon.png
-  effect: false
+  img: /img/avatar.svg
+  effect: true
 
 # Disable all banner images
 disable_top_img: false
@@ -777,21 +777,21 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#a855f7"
-  paginator: "#06b6d4"
-  button_hover: "#ec4899"
-  text_selection: "#06b6d4"
-  link_color: "#c4b5fd"
-  meta_color: "#9ca3af"
-  hr_color: "#4c1d95"
-  code_foreground: "#f472b6"
-  code_background: "rgba(168, 85, 247, .10)"
-  toc_color: "#a855f7"
-  blockquote_padding_color: "#7c3aed"
-  blockquote_background_color: "#7c3aed"
-  scrollbar_color: "#a855f7"
-  meta_theme_color_light: "0b0b16"
-  meta_theme_color_dark: "0b0b16"
+  main: "#ff8a65"
+  paginator: "#ffb86b"
+  button_hover: "#ff5c8a"
+  text_selection: "#ffb4a2"
+  link_color: "#ffa07a"
+  meta_color: "#c9b6ae"
+  hr_color: "#5a2a2a"
+  code_foreground: "#ffb4a2"
+  code_background: "rgba(255, 138, 101, .10)"
+  toc_color: "#ff8a65"
+  blockquote_padding_color: "#ff8a65"
+  blockquote_background_color: "#ff8a65"
+  scrollbar_color: "#ff8a65"
+  meta_theme_color_light: "1a1012"
+  meta_theme_color_dark: "1a1012"
 
 # The user interface setting of category and tag page
 # Choose: index - same as Homepage UI / default - same as archives UI

@@ -1,12 +1,12 @@
-/* ===== 霓虹暗色定制 ===== */
+/* ===== 粉橘色霓虹定制（效果不变，只换配色） ===== */
 
 /* 顶部横幅：极光渐变 + 呼吸变色 */
 #page-header {
-  background-color: #08070f !important;
+  background-color: #140d10 !important;
   background-image:
-    radial-gradient(ellipse 900px 620px at 12% 12%, rgba(124, 58, 237, .95), transparent 68%),
-    radial-gradient(ellipse 820px 560px at 88% 18%, rgba(6, 182, 212, .85), transparent 66%),
-    radial-gradient(ellipse 900px 700px at 55% 100%, rgba(236, 72, 153, .80), transparent 70%) !important;
+    radial-gradient(ellipse 900px 620px at 12% 12%, rgba(255, 92, 138, .90), transparent 68%),
+    radial-gradient(ellipse 820px 560px at 88% 18%, rgba(255, 154, 90, .85), transparent 66%),
+    radial-gradient(ellipse 900px 700px at 55% 100%, rgba(255, 196, 140, .75), transparent 70%) !important;
   background-size: 100% 100% !important;
   background-repeat: no-repeat !important;
   animation: bf-breathe 14s ease-in-out infinite alternate;
@@ -14,19 +14,19 @@
 
 @keyframes bf-breathe {
   from { filter: saturate(1) hue-rotate(0deg); }
-  to   { filter: saturate(1.25) hue-rotate(28deg); }
+  to   { filter: saturate(1.22) hue-rotate(-10deg); }
 }
 
-/* 网格 + 中心辉光（赛博感） */
+/* 网格 + 中心辉光 */
 #page-header::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(circle at 50% 46%, rgba(168, 85, 247, .38), transparent 62%),
-    linear-gradient(rgba(168, 85, 247, .18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, .14) 1px, transparent 1px);
+    radial-gradient(circle at 50% 46%, rgba(255, 122, 110, .36), transparent 62%),
+    linear-gradient(rgba(255, 122, 130, .17) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 176, 96, .14) 1px, transparent 1px);
   background-size: 100% 100%, 46px 46px, 46px 46px;
   -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 78%);
   mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 78%);
@@ -51,39 +51,39 @@
 
 #site-info { z-index: 2; }
 
-/* 整页背景：两团静态辉光，避免纯黑发闷 */
+/* 整页背景：两团暖色辉光 */
 body {
   background-image:
-    radial-gradient(700px 500px at 92% 8%, rgba(124, 58, 237, .16), transparent 70%),
-    radial-gradient(800px 600px at 4% 62%, rgba(6, 182, 212, .12), transparent 70%);
+    radial-gradient(700px 500px at 92% 8%, rgba(255, 92, 138, .16), transparent 70%),
+    radial-gradient(800px 600px at 4% 62%, rgba(255, 154, 90, .13), transparent 70%);
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 /* 站点标题发光 */
 #site-title {
-  text-shadow: 0 0 16px rgba(168, 85, 247, .95), 0 0 52px rgba(6, 182, 212, .65);
+  text-shadow: 0 0 16px rgba(255, 120, 140, .95), 0 0 52px rgba(255, 190, 120, .65);
 }
 
 #site-subtitle {
-  text-shadow: 0 0 12px rgba(6, 182, 212, .7);
+  text-shadow: 0 0 12px rgba(255, 186, 120, .7);
 }
 
 /* 卡片：玻璃质感 + 悬浮发光 */
 .card-widget,
 .recent-post-item {
   backdrop-filter: blur(10px) saturate(140%);
-  border: 1px solid rgba(168, 85, 247, .20);
+  border: 1px solid rgba(255, 138, 101, .22);
   transition: box-shadow .35s ease, border-color .35s ease;
 }
 
 .card-widget:hover,
 .recent-post-item:hover {
-  border-color: rgba(168, 85, 247, .6);
-  box-shadow: 0 0 0 1px rgba(168, 85, 247, .35), 0 18px 45px rgba(88, 28, 135, .5);
+  border-color: rgba(255, 138, 101, .65);
+  box-shadow: 0 0 0 1px rgba(255, 138, 101, .35), 0 18px 45px rgba(140, 45, 60, .45);
 }
 
-/* 滚动进场动画（Chrome/Edge 支持） */
+/* 滚动进场动画 */
 @supports (animation-timeline: view()) {
   .recent-post-item {
     animation: bf-in both;
@@ -100,7 +100,7 @@ body {
 /* 文章标题渐变字 */
 .recent-post-item .article-title,
 #post-info .post-title {
-  background-image: linear-gradient(92deg, #c084fc, #67e8f9 55%, #f472b6);
+  background-image: linear-gradient(92deg, #ffd3a5, #ff8a65 55%, #ff5c8a);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -115,7 +115,7 @@ body {
   height: 420px;
   margin: -210px 0 0 -210px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(168, 85, 247, .22), rgba(6, 182, 212, .09) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 138, 101, .24), rgba(255, 92, 138, .10) 45%, transparent 70%);
   pointer-events: none;
   z-index: 1;
   opacity: 0;
@@ -123,7 +123,7 @@ body {
   filter: blur(6px);
 }
 
-/* 滚动条霓虹 */
+/* 滚动条 */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #a855f7, #06b6d4);
+  background: linear-gradient(180deg, #ff8a65, #ff5c8a);
 }
