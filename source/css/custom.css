@@ -97,13 +97,19 @@ body {
   to   { opacity: 1; transform: none; }
 }
 
-/* 文章标题渐变字 */
-.recent-post-item .article-title,
-#post-info .post-title {
+/* 列表卡片标题：渐变字 */
+.recent-post-item .article-title {
   background-image: linear-gradient(92deg, #ffd3a5, #ff8a65 55%, #ff5c8a);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* 文章页大标题：横幅已经是亮的，改用白色+阴影保证可读 */
+#post-info .post-title {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: 0 2px 20px rgba(70, 10, 35, .55), 0 1px 3px rgba(70, 10, 35, .4);
 }
 
 /* 光标光晕 */
