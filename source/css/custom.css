@@ -144,3 +144,9 @@ body {
   color: rgba(255, 255, 255, .96) !important;
   text-shadow: 0 1px 6px rgba(120, 45, 30, .5);
 }
+/* 头像容器去掉底色，避免卡片里出现一块白色方块 */
+.avatar-img,
+.avatar-img img {
+  background: transparent !important;
+  box-shadow: none !important;
+}
